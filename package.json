@@ -1,0 +1,61 @@
+{
+  "name": "gat9-symlinks-files-store",
+  "displayName": "gat9 Symlinks Files Store",
+  "description": "Extension uses Symlinks feature to organize external store for some project files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onFileSystem:file"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "gat9.link",
+        "title": "gat9 Link"
+      },
+      {
+        "command": "gat9.restore",
+        "title": "gat9 Restore"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "gat9.link",
+          "group": "7_modification"
+        },
+        {
+          "command": "gat9.restore",
+          "group": "7_modification"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "gat9 Symlinks Files Store Settings",
+      "properties": {
+        "gat9-symlinks.enableBackups": {
+          "type": "boolean",
+          "default": true,
+          "description": "Создавать резервные копии файлов перед перезаписью."
+        },
+        "gat9-symlinks.globalConfigPath": {
+          "type": "string",
+          "default": "~/.gat9-symlinks",
+          "description": "Путь к глобальному файлу конфигурации (используется, если локальный .gat9-symlinks отсутствует)."
+        }
+      }
+    },
+    "fileDecorationProviders": [
+      {
+        "id": "gat9-symlink-decorator",
+        "label": "gat9 Symlinks Highlighter"
+      }
+    ]
+  }
+}
