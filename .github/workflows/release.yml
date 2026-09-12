@@ -25,7 +25,7 @@ jobs:
         run: npm ci
 
       - name: Package Extension to VSIX
-        run: npm run package
+        run: npx @vscode/vsce package --no-dependencies
 
       - name: Upload VSIX to GitHub Release
         uses: softprops/action-gh-release@v2
