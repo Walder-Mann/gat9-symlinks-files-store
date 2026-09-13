@@ -3,6 +3,10 @@
   "displayName": "gat9 Symlinks Files Store",
   "description": "Extension uses Symlinks feature to organize external store for some project files",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Walder-Mann/gat9-symlinks-files-store.git"
+  },
   "engines": {
     "vscode": "^1.93.0"
   },
@@ -57,5 +61,11 @@
         "label": "gat9 Symlinks Highlighter"
       }
     ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "echo 'No compile step needed for JS'",
+    "lint": "eslint .",
+    "package": "vsce package"
   }
 }
