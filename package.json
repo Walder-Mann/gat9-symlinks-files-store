@@ -2,7 +2,7 @@
   "name": "gat9-symlinks-files-store",
   "displayName": "gat9 Symlinks Files Store",
   "description": "Extension uses Symlinks feature to organize external store for some project files",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/Walder-Mann/gat9-symlinks-files-store.git"
