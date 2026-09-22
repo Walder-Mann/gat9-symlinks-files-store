@@ -4,7 +4,7 @@
   "description": "Extension uses Symlinks feature to organize external store for some project files",
   "version": "0.0.2",
   "publisher": "gat",
-  "author": "Walder-Mann",  
+  "author": "Walder-Mann",
   "repository": {
     "type": "git",
     "url": "https://github.com/Walder-Mann/gat9-symlinks-files-store.git"
@@ -28,6 +28,14 @@
       {
         "command": "gat9.restore",
         "title": "gat9 Restore"
+      },
+      {
+        "command": "gat9.insert",
+        "title": "gat9 Insert"
+      },
+      {
+            "command": "gat9.refreshExplorer",
+            "title": "gat9 Refresh Links Layout"
       }
     ],
     "menus": {
@@ -39,6 +47,16 @@
         {
           "command": "gat9.restore",
           "group": "7_modification"
+        },
+        {
+          "command": "gat9.insert",
+          "group": "7_modification",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "gat9.refreshExplorer",
+          "group": "7_modification",
+            "when": "filesExplorerFocus"
         }
       ]
     },
